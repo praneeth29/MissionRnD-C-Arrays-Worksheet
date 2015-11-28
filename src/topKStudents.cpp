@@ -22,5 +22,20 @@ struct student {
 };
 
 struct student ** topKStudents(struct student *students, int len, int K) {
+    struct student s1=students[0],s2=students[1];
+    printf("%d",s1.score);
 	return NULL;
+}
+int main()
+{
+    struct student students[2];
+    students[0].name="ap";
+    students[0].score=30;
+    students[1].name="sp";
+    students[1].score=60;
+    int K=2;
+    int len=2;
+    topKStudents(students,len,K);
+
+    return 0;
 }

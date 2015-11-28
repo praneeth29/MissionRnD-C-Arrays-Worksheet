@@ -17,21 +17,30 @@ void * removeArrayDuplicates(int *Arr, int len)
 {
     int  i, j, k;
 
-   for (i = 0; i < len; i++)
+    if(len<0)
     {
-      for (j = i + 1; j < len;)
-       {
-         if (Arr[j] == Arr[i])
-          {
-            for (k = j; k < len; k++)
-             {
-               Arr[k] = Arr[k + 1];
-             }
-            len--;
-          }
-          else
-            j++;
-       }
-	return NULL;
+        return NULL;
     }
+    if(Arr){
+     for(i=0; i < len; i++)
+   {
+      for(j=i+1; j < len; )
+      {
+         if(Arr[j] == Arr[i])
+         {
+            for(k=j; k < len;k++)
+            {
+               Arr[k] = Arr[k+1];
+            }
+            len--;
+         }
+         else {
+            j++;
+         }
+      }
+   }
+    }
+    return NULL;
+
+
 }
